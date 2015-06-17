@@ -1,0 +1,9 @@
+<h2>Reviews:</h2>
+
+<ul>
+  {{#each review in model}}
+  <li>{{model.author}} {{model.review}}</li>
+  {{/each}}
+</ul>
+
+{{outlet}}
