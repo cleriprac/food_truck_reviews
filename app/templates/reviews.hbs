@@ -1,9 +1,10 @@
 <h2>Reviews:</h2>
-
+{{outlet}}
+<br>
+<div>{{#link-to 'reviews.new-review'}}New Review{{/link-to}}</div>
+<hr>
 <ul>
   {{#each review in model}}
-  <li>{{model.author}} {{model.review}}</li>
+  <li class="well"><h5>{{review.review}}</h5>by: {{review.author}} </li>
   {{/each}}
 </ul>
-
-{{outlet}}

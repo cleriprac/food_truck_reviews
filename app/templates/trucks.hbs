@@ -1,6 +1,7 @@
-<h2>Trucks</h2>
-<div class="new-msg-link">{{#link-to 'trucks.new'}}Add a new truck{{/link-to}}</div>
+
+<div class="new-msg-link">{{#link-to 'trucks.new-truck'}}Add a new truck{{/link-to}}</div>
 <hr>
+<h3>Trucks</h3>
 {{#each truck in model}}
 <div class="each-truck">{{#link-to 'truck' truck.id}}{{truck.name}}: {{truck.description}}{{/link-to}}</div>
 {{/each}}

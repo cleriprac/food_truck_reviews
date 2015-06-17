@@ -8,10 +8,10 @@ var Router = Ember.Router.extend({
 Router.map(function() {
   this.route("about");
   this.resource("trucks", function() {
-    this.route("new");
+    this.route("new-truck");
     this.resource("truck", {path: ":truck_id"}, function() {
       this.resource("reviews", function() {
-        this.route("new");
+        this.route("new-review");
       });
     });
   });
