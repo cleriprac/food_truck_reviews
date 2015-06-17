@@ -4,6 +4,8 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'food-truck-reviews',
     environment: environment,
+    contentSecurityPolicy: { 'connect-src': "'self' wss://*.firebaseio.com" },
+    firebase: 'https://fiery-torch-457.firebaseio.com/',
     baseURL: '/',
     locationType: 'auto',
     EmberENV: {

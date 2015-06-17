@@ -6,6 +6,13 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route("about");
+  this.resource("trucks", function() {
+    this.route("new");
+  });
+  this.route('featured', {path: '/'});
+
+
 });
 
 export default Router;
