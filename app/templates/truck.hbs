@@ -2,6 +2,13 @@
 <h2>{{model.name}}</h2>
 <h4>{{model.description}}</h4>
 <hr>
-<div>{{#link-to 'reviews'}}Show Reviews{{/link-to}}</div>
+
+<ul>
+  {{#each review in model.reviews}}
+    <li class="well">{{review.review}} by {{review.author}}</li>
+    {{/each}}
+</ul>
+
+<div>{{#link-to 'truck.new-review'}}New Review{{/link-to}}</div>
 
 {{outlet}}

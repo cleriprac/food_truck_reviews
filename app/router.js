@@ -10,9 +10,7 @@ Router.map(function() {
   this.resource("trucks", function() {
     this.route("new-truck");
     this.resource("truck", {path: ":truck_id"}, function() {
-      this.resource("reviews", function() {
         this.route("new-review");
-      });
     });
   });
   this.route('featured', {path: '/'});

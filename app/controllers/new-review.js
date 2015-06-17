@@ -6,7 +6,8 @@ export default Ember.Controller.extend({
     addReview: function() {
       var newReview = this.store.createRecord('review', {
         author: this.get('author'),
-        review: this.get('review')
+        review: this.get('review'),
+        truck: this.get('controllers.truck.model')
       });
       newReview.save();
 
